@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 
 import Aura from '@primevue/themes/aura';
+import { MotionPlugin } from '@vueuse/motion';
 import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
@@ -13,6 +14,7 @@ import '@/assets/tailwind.css';
 const app = createApp(App);
 
 app.use(router);
+app.use(MotionPlugin);
 app.use(PrimeVue, {
     theme: {
         preset: Aura,
