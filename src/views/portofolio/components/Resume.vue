@@ -1,6 +1,6 @@
 <script setup>
     import { onMounted, ref, watch } from 'vue';
-    import { descAbEng, descAbInd, expEng, expInd } from '@/api/DummyData';
+    import { descAbEng, descAbInd, expEng, expInd, skills } from '@/api/DummyData';
     import { useRoute } from 'vue-router';
     import { resumeElements } from '@/api/TransitionEffect';
     import { gsap } from 'gsap';
@@ -17,24 +17,7 @@
 
     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
 
-    const skill = ref([
-        {img:'html5', name:'HTML 5'},
-        {img:'javascript', name:'Javascript'},
-        {img:'css', name:'CSS 3'},
-        {img:'vuejs', name:'Vue JS'},
-        {img:'react', name:'React Native'},
-        {img:'nodejs', name:'Node JS'},
-        {img:'tailwindcss', name:'TailwindCSS'},
-        {img:'laravel', name:'Laravel'},
-        {img:'codeigniter', name:'Codeigniter'},
-        {img:'flask', name:'Flask (Python)'},
-        {img:'mysql', name:'MySQL'},
-        {img:'postgres', name:'PostgreSQL'},
-        {img:'linux', name:'Linux'},
-        {img:'docker', name:'Docker'},
-        {img:'git', name:'Git'},
-        {img:'canva', name:'Canva'},
-    ])
+    const skill = ref(skills)
 
     onMounted(() => {
         mainFunc()
@@ -73,10 +56,22 @@
         const sections = document.querySelectorAll('section');
 
         sections.forEach((section) => {
+            // gsap.from(section, {
+            //     opacity: 0,
+            //     y: 50,
+            //     duration: 1,
+            //     scrollTrigger: {
+            //         trigger: section,
+            //         start: 'top 80%', // Mulai animasi saat 80% dari viewport
+            //         end: 'top 30%', // Selesai animasi saat 30% dari viewport
+            //         toggleActions: 'play none none reverse', // Animasi akan terulang saat di-scroll kembali
+            //     },
+            // });
             gsap.from(section, {
                 opacity: 0,
-                y: 50,
+                y: -50,
                 duration: 1,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: section,
                     start: 'top 80%', // Mulai animasi saat 80% dari viewport
@@ -90,7 +85,7 @@
 </script>
 
 <template>
-    <div class="flex items-center w-full">
+    <div class="flex items-center w-full bg-gray-900 rounded-b-xl">
         <div class="flex flex-col">
             <!-- About -->
             <section class="flex items-center justify-center w-full min-h-screen gap-0 border-b-2 border-yellow-600">
@@ -99,7 +94,7 @@
                 </div>
                 <div class="flex flex-col w-full gap-8 pr-[5rem] rounded-xl">
                     <span class="font-mono text-6xl font-light text-white underline uppercase underline-offset-8">{{title}}</span>
-                    <p class="font-mono text-gray-400 desc-section">{{desc}}</p>
+                    <p class="p-5 font-mono text-justify text-gray-600 bg-white desc-section">{{desc}}</p>
                     <small class="text-xl font-bold text-yellow-600 name-section">Rio Teguh Ardiarta</small>
                 </div>
             </section>
