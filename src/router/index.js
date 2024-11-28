@@ -5,17 +5,20 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            component: () => import('@/views/portofolio/Index.vue'),
+            // component: () => import('@/views/portofolio/Index.vue'),
+            component: () => import('@/views/portofolio/layout/Index.vue'),
             children:[
                 {
                     path: '/',
                     name: 'home',
-                    component: () => import('@/views/portofolio/components/Home.vue')
+                    // component: () => import('@/views/portofolio/components/Home.vue')
+                    component: () => import('@/views/portofolio/home/Index.vue')
                 },
                 {
                     path: '/about',
                     name: 'about',
-                    component: () => import('@/views/portofolio/components/Resume.vue')
+                    component: () => import('@/views/portofolio/about/Index.vue')
+                    // component: () => import('@/views/portofolio/components/Resume.vue')
                 },
                 {
                     path: '/contact',
