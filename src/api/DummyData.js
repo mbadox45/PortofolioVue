@@ -2,46 +2,88 @@
 export const descAbEng = 'As a Software Developer with over 4 years of experience, I have successfully completed more than 4 application projects for various companies, including PT Industri Nabati Lestari. My expertise encompasses the entire spectrum of web and application development, from frontend to backend. I am always committed to delivering high-quality solutions that meet client needs, while continuously learning and adopting the latest technologies in the industry.';
 export const descAbInd = 'Sebagai seorang Software Developer dengan pengalaman lebih dari 4 tahun, saya telah berhasil menyelesaikan lebih dari 4 proyek aplikasi di berbagai perusahaan, termasuk PT Industri Nabati Lestari. Keahlian saya mencakup seluruh spektrum pengembangan web dan aplikasi, dari frontend hingga backend. Saya selalu berkomitmen untuk menghadirkan solusi berkualitas tinggi yang sesuai dengan kebutuhan klien, serta terus belajar dan mengadopsi teknologi terbaru di industri ini.';
 export const expEng = [
-    { status: 'PT Industri Nabati Lestari', date: 'Dec 2021 - Present', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Build web-based applications with Vue JS and Typescript (Full Stack) according to company needs.'},
-        {no:2, name:'Application created : MeeTrip, Customer Survey, SARI, Asmen, Rekan & Daico.'},
-        {no:3, name:'Handle IT device troubleshooting to ensure optimal functionality.'},
-        {no:4, name:'Support troubleshooting and maintenance of LAN networks to ensure stable connectivity and performance.'},
-    ] },
-    { status: 'PT. Indonesia Comnets Plus', date: 'Jul 2019 - Dec 2021', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Conducted migration of the CM-CRM application from Native to the CodeIgniter (CI) framework.'},
-        {no:2, name:'Developed the I-Transport, MRTG+, and Darmon applications.'},
-        {no:3, name:'Performed network monitoring using Zabbix and MRTG+.'},
-    ] },
-    { status: 'PT. Infomedia Solusi Humanika', date: 'Oct 2018 - Jul 2019', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Supporting the E-KTP print and record application service at Kementerian Dalam Negeri RI.'},
-        {no:2, name:'Developing the FAQ Helpdesk ATS application.'},
-    ] },
-    { status: 'PT. Global One Solusindo', date: 'Mar 2018 - Sep 2018', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Conducting KPI data analysis for 2G, 3G, and 4G technologies in the Huawei XL-JPS project.'},
-        {no:2, name:'Develop Compiling reports on BTS signal quality.'},
-    ] },
+    { status: 'PT. Industri Nabati Lestari', possition: [
+        {
+            date: 'Sep 2022 - Present', icon: 'Analyst Development Application', color: 'full time', items:[
+                {no:1, name:'Build web-based applications with Vue JS and Typescript (Full Stack) according to company needs.'},
+                {no:2, name:'Application created : MeeTrip, Customer Survey, SARI, Asmen, Rekan & Daico.'},
+            ]
+        },
+        {
+            date: 'Dec 2021 - Sep 2022', icon: 'Foreman Programmer', color: 'full time', items:[
+                {no:1, name:'Build web-based applications with Vue JS and Typescript (Full Stack) according to company needs.'},
+                {no:3, name:'Handle IT device troubleshooting to ensure optimal functionality.'},
+                {no:4, name:'Support troubleshooting and maintenance of LAN networks to ensure stable connectivity and performance.'},
+            ]
+        },
+    ]},
+    { status: 'PT. Indonesia Comnets Plus', possition: [
+        {
+            date: 'Jul 2019 - Dec 2021', icon: 'Full Stack Developer', color: 'full time', items:[
+                {no:1, name:'Conducted migration of the CM-CRM application from Native to the CodeIgniter (CI) framework.'},
+                {no:2, name:'Developed the I-Transport, MRTG+, and Darmon applications.'},
+                {no:3, name:'Performed network monitoring using Zabbix and MRTG+.'},
+            ]
+        }
+    ]},
+    { status: 'PT. Infomedia Solusi Humanika', possition: [
+        {
+            date: 'Oct 2018 - Jul 2019', icon: 'Helpdesk ATS (Annual Technical Support)', color: 'full time', items:[
+                {no:1, name:'Supporting the E-KTP print and record application service at Kementerian Dalam Negeri RI.'},
+                {no:2, name:'Developing the FAQ Helpdesk ATS application.'},
+            ] 
+        }
+    ]},
+    { status: 'PT. Global One Solusindo', possition: [
+        {
+            date: 'Mar 2018 - Sep 2018', icon: 'OSS Engineer', color: 'contract', items:[
+                {no:1, name:'Conducting KPI data analysis for 2G, 3G, and 4G technologies in the Huawei XL-JPS project.'},
+                {no:2, name:'Develop Compiling reports on BTS signal quality.'},
+            ] 
+        }
+    ]},
 ]
 export const expInd = [
-    { status: 'PT Industri Nabati Lestari', date: 'Dec 2021 - Present', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Membangun aplikasi berbasis web menggunakan Vue JS dan Typescript (Full Stack) sesuai dengan kebutuhan perusahaan.'},
-        {no:2, name:'Aplikasi yang telah dibangun: MeeTrip, Customer Survey, SARI, Asmen, Rekan & Daico.'},
-        {no:3, name:'Menangani troubleshooting perangkat IT untuk memastikan perangkat berfungsi dengan optimal.'},
-        {no:4, name:'Mendukung troubleshooting dan pemeliharaan jaringan LAN untuk memastikan konektivitas dan performa yang stabil.'},
-    ] },
-    { status: 'PT. Indonesia Comnets Plus', date: 'Jul 2019 - Dec 2021', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Melakukan migrasi aplikasi CM-CRM dari Native ke framework CodeIgniter (CI).'},
-        {no:2, name:'Mengembangkan aplikasi I-Transport, MRTG+, dan Darmon.'},
-        {no:3, name:'Melakukan pemantauan jaringan menggunakan Zabbix dan MRTG+.'},
-    ] },
-    { status: 'PT. Infomedia Solusi Humanika', date: 'Oct 2018 - Jul 2019', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Mendukung layanan aplikasi cetak dan rekam E-KTP di Kementerian Dalam Negeri RI.'},
-        {no:2, name:'Membangun aplikasi FAQ Helpdesk ATS.'},
-    ] },
-    { status: 'PT. Global One Solusindo', date: 'Mar 2018 - Sep 2018', icon: 'pi pi-check', color: '#138d75', items:[
-        {no:1, name:'Melakukan analisis data KPI untuk teknologi 2G, 3G, dan 4G dalam proyek Huawei XL-JPS.'},
-        {no:2, name:'Menyusun laporan tentang kualitas sinyal BTS (Base Transceiver Station).'},
-    ] },
+    { status: 'PT. Industri Nabati Lestari', possition:[
+        {
+            date: 'Sep 2022 - Present', icon: 'Analyst Development Application', color: 'waktu penuh', items:[
+                {no:1, name:'Membangun aplikasi berbasis web menggunakan Vue JS dan Typescript (Full Stack) sesuai dengan kebutuhan perusahaan.'},
+                {no:2, name:'Aplikasi yang telah dibangun: MeeTrip, Customer Survey, SARI, Asmen, Rekan & Daico.'},
+            ] 
+        },
+        {
+            date: 'Dec 2021 - Sep 2022', icon: 'Foreman Programmer', color: 'waktu penuh', items:[
+                {no:1, name:'Membangun aplikasi berbasis web menggunakan Vue JS dan Typescript (Full Stack) sesuai dengan kebutuhan perusahaan.'},
+                {no:3, name:'Menangani troubleshooting perangkat IT untuk memastikan perangkat berfungsi dengan optimal.'},
+                {no:4, name:'Mendukung troubleshooting dan pemeliharaan jaringan LAN untuk memastikan konektivitas dan performa yang stabil.'},
+            ] 
+        }
+    ]},
+    { status: 'PT. Indonesia Comnets Plus', possition:[
+        {
+            date: 'Jul 2019 - Dec 2021', icon: 'Full Stack Developer', color: 'waktu penuh', items:[
+                {no:1, name:'Melakukan migrasi aplikasi CM-CRM dari Native ke framework CodeIgniter (CI).'},
+                {no:2, name:'Mengembangkan aplikasi I-Transport, MRTG+, dan Darmon.'},
+                {no:3, name:'Melakukan pemantauan jaringan menggunakan Zabbix dan MRTG+.'},
+            ] 
+        }
+    ]},
+    { status: 'PT. Infomedia Solusi Humanika', possition:[
+        {
+            date: 'Oct 2018 - Jul 2019', icon: 'Helpdesk ATS (Annual Technical Support)', color: 'waktu penuh', items:[
+                {no:1, name:'Mendukung layanan aplikasi cetak dan rekam E-KTP di Kementerian Dalam Negeri RI.'},
+                {no:2, name:'Membangun aplikasi FAQ Helpdesk ATS.'},
+            ] 
+        }
+    ]},
+    { status: 'PT. Global One Solusindo', possition:[
+        {
+            date: 'Mar 2018 - Sep 2018', icon: 'OSS Engineer', color: 'kontrak', items:[
+                {no:1, name:'Melakukan analisis data KPI untuk teknologi 2G, 3G, dan 4G dalam proyek Huawei XL-JPS.'},
+                {no:2, name:'Menyusun laporan tentang kualitas sinyal BTS (Base Transceiver Station).'},
+            ] 
+        }
+    ]},
 ]
 export const skills = [
     {img:'html5', name:'HTML 5', type:'fe'},
@@ -54,13 +96,13 @@ export const skills = [
     {img:'laravel', name:'Laravel', type:'be'},
     {img:'codeigniter', name:'Codeigniter', type:'be'},
     {img:'flask', name:'Flask (Python)', type:'be'},
-    {img:'mysql', name:'MySQL', type:'db'},
-    {img:'postgres', name:'PostgreSQL', type:'db'},
-    {img:'docker', name:'Docker', type:'repo'},
-    {img:'git', name:'Git', type:'repo'},
-    // {img:'linux', name:'Linux'},
-    {img:'canva', name:'Canva', type:'design'},
-    {img:'canva', name:'Figma', type:'design'},
+    {img:'mysql', name:'MySQL', type:'dll'},
+    {img:'postgres', name:'PostgreSQL', type:'dll'},
+    {img:'docker', name:'Docker', type:'dll'},
+    {img:'git', name:'Git', type:'dll'},
+    {img:'linux', name:'Linux', type:'dll'},
+    // {img:'canva', name:'Canva', type:'dll'},
+    // {img:'canva', name:'Figma', type:'dll'},
 ]
 
 
@@ -78,13 +120,13 @@ export const messageContact = 'For further information, please contact me via th
 export const contactEnglish = [
     {id: 1, name: 'Phone / WhatsApp', detail: '+62 813-8837-5266', icon:'pi-phone', bgcolor:'bg-green-600'},
     {id: 2, name: 'Email', detail: 'rioteguhard@gmail.com', icon:'pi-envelope', bgcolor:'bg-pink-600'},
-    {id: 3, name: 'Address', detail: 'Bahlias Perdagangan, Simalungun - North Sumatera, Indonesia', icon:'pi-map-marker', bgcolor:'bg-blue-600'},
+    // {id: 3, name: 'Address', detail: 'Bahlias Perdagangan, Simalungun - North Sumatera, Indonesia', icon:'pi-map-marker', bgcolor:'bg-blue-600'},
 ]
 export const pesanContact = 'Untuk informasi lebih lanjut, silakan hubungi saya melalui pesan di bawah ini atau melalui detail kontak yang tersedia.';
 export const contactIndo = [
     {id: 1, name: 'No.HP / WhatsApp', detail: '+62 813-8837-5266', icon:'pi-phone', bgcolor:'bg-green-600'},
     {id: 2, name: 'Email', detail: 'rioteguhard@gmail.com', icon:'pi-envelope', bgcolor:'bg-pink-600'},
-    {id: 3, name: 'Alamat', detail: 'Bahlias Perdagangan, Simalungun - Sumatera Utara, Indonesia', icon:'pi-map-marker', bgcolor:'bg-blue-600'},
+    // {id: 3, name: 'Alamat', detail: 'Bahlias Perdagangan, Simalungun - Sumatera Utara, Indonesia', icon:'pi-map-marker', bgcolor:'bg-blue-600'},
 ]
 
 

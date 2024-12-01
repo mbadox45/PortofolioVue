@@ -53,16 +53,21 @@ const animates = async () => {
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center w-full gap-5 sm:flex-row align-center px-[3rem] bg-transparent rounded-b-xl ">
+    <div class="flex flex-col items-center justify-center w-full gap-5 sm:flex-row align-center px-[3.5rem] bg-transparent rounded-b-xl ">
         <div class="flex flex-col w-full h-auto gap-5 p-8 text-black">
-            <span class="text-3xl font-bold text-yellow-800 underline capitalize underline-offset-4">Software Engineer</span>
+            <div class="flex items-center">
+                <div class="flex items-center gap-3 px-6 py-3 bg-black rounded-full ">
+                    <div class="p-2 bg-green-300 rounded-full"></div>
+                    <span class="text-xl font-bold text-green-300 capitalize">Software Engineer</span>
+                </div>
+            </div>
             <div class="flex flex-col gap-2 title-section">
                 <span class="text-6xl font-bold capitalize">{{ title }}</span>
                 <span class="text-6xl font-bold capitalize">Rio Teguh Ardiarta</span>
             </div>
             <p class="text-xl text-black desc-section">{{ desc }}</p>
             <div class="flex flex-row items-center justify-between w-full gap-10 text-black">
-                <button class="flex flex-row items-center justify-center w-1/2 gap-3 p-3 font-bold transition-all duration-300 border-2 border-black rounded hover:bg-[#9a7d0a] hover:text-white hover:border-[#9a7d0a]" @click="link(cv)">
+                <button class="flex flex-row items-center justify-center w-1/2 gap-3 p-3 font-bold transition-all duration-300 border-2 border-black rounded hover:bg-green-800 hover:text-white hover:border-green-800" @click="link(cv)">
                     Download CV <i class="font-bold pi pi-download"></i>
                 </button>
                 <div class="flex items-center justify-start w-full gap-10">
@@ -73,18 +78,20 @@ const animates = async () => {
                         v-tooltip.top="item.name"
                         @click="link(item.routes)"
                     >
-                        <i :class="`pi ${item.icon} hover:text-[#9a7d0a] transition-all duration-300`" style="font-size:20px;"></i>
+                        <i :class="`pi ${item.icon} hover:text-green-800 transition-all duration-300`" style="font-size:20px;"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-end w-full p-8">
-            <img src="/gambar4.png" alt="Rio Teguh" class="bg-white border-gray-800 rounded-full border-[15px] shadow-gray-600 shadow-inner icon-section" width="380px">
+            <div class="rounded-full border-[4px] border-green-300 shadow-md shadow-green-300 icon-section">
+                <img src="/gambar4.png" alt="Rio Teguh" class="bg-white border-black rounded-full border-[15px] shadow-white shadow-inner " width="380px">
+            </div>
         </div>
         <div class="absolute w-full px-[6.5rem] bottom-0 center-0 bottom-section bg-black">
             <div class="flex items-center justify-between gap-8 text-white">
                 <div class="flex items-center justify-center w-auto gap-3 py-[30px]" v-for="(item, index) in listbottom" :key="index">
-                    <span class="text-6xl font-black text-[#ffde59]">{{ item.name }}</span>
+                    <span class="text-6xl font-black text-green-300">{{ item.name }}</span>
                     <Divider layout="vertical" />
                     <span class="text-2xl">{{ item.ket }}</span>
                 </div>

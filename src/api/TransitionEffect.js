@@ -64,8 +64,46 @@ export const resumeElements = () => {
         ease: "power2.out",
         delay: 0.5,
     });
-
 };
+
+export const skillElements = () => {
+    gsap.from(".icon-skill-section", {
+        opacity: 0,
+        scale: 0.5,
+        duration: 0.8,
+        ease: "back.inOut(1.8)",
+        delay: 1.5,
+        stagger: 0.2,
+    });
+    gsap.from(".fe-skill-section", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out",
+    });
+    gsap.from(".be-skill-section", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.5,
+    });
+    gsap.from(".oth-skill-section", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1,
+    });
+    gsap.from(".icon-section", {
+        opacity: 0,
+        scale: 0.5,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 1,
+        stagger: 0.2,
+    });
+}
 
 export const contactElements = () => {
     // Contact
