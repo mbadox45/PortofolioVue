@@ -11,8 +11,32 @@ const frontend = ref();
 const backend = ref();
 const database = ref();
 
+const responsiveOptions = ref([
+    {
+        breakpoint: '1400px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
+]);
+
+
 onMounted(() => {
-    loadSkill();
+    // loadSkill();
     mainFunc();
     animates();
 });
@@ -21,11 +45,11 @@ const animates = async () => {
     return await skillElements();
 };
 
-const loadSkill = async () => {
-    frontend.value = skill.value.filter((item) => item.type == 'fe');
-    backend.value = skill.value.filter((item) => item.type == 'be');
-    database.value = skill.value.filter((item) => item.type == 'dll');
-};
+// const loadSkill = async () => {
+//     frontend.value = skill.value.filter((item) => item.type == 'fe');
+//     backend.value = skill.value.filter((item) => item.type == 'be');
+//     database.value = skill.value.filter((item) => item.type == 'dll');
+// };
 
 const mainFunc = async () => {
     console.log(route.query.country);
@@ -41,12 +65,25 @@ watch(
     mainFunc,
     { immediate: true } // This ensures `mainFunc` is run initially on mount
 );
+
 </script>
 
 <template>
-    <section v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }" class="relative flex flex-col items-center justify-center w-full gap-[3rem] min-h-screen">
-        <span class="w-full text-6xl font-black text-center text-black uppercase underline-offset-8">{{ title2 }}</span>
-        <div class="flex items-start justify-center w-full px-[5rem] gap-5">
+    <section id="skill" class="relative flex flex-col items-center justify-center w-full gap-[4rem]">
+        <span class="w-full text-6xl font-black text-center text-black uppercase underline-offset-8 title-skill">{{ title2 }}</span>
+        <div class="w-full p-5">
+            <Carousel :value="skill" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" class="icon-section">
+                <template #item="slotProps">
+                    <div class="flex justify-center p-4 m-2 transition-all duration-300 bg-white rounded shadow cursor-pointer hover:shadow-xl">
+                        <div class="flex flex-col gap-3">
+                            <img :src="`/iconskill/${slotProps.data.img}.png`" :alt="slotProps.data.name" class="p-3 transition-all duration-300 bg-transparent rounded-3xl" width="100px" />
+                            <span class="text-lg font-bold text-center">{{slotProps.data.name}}</span>
+                        </div>
+                    </div>
+                </template>
+            </Carousel>
+        </div>
+        <!-- <div class="flex items-start justify-center w-full px-[5rem] gap-5">
             <div class="flex flex-col items-center w-full bg-white shadow-lg rounded-xl fe-skill-section">
                 <span class="flex items-center justify-between w-full gap-2 px-[2rem] py-[2rem] text-green-300 bg-black rounded-t-xl"
                     ><span class="text-2xl font-bold text">Front End</span> <span class="px-4 py-2 font-medium text-black bg-green-300 rounded-full"> Technologies</span></span
@@ -77,8 +114,8 @@ watch(
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div>
+        </div> -->
+        <!-- <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div> -->
     </section>
 </template>
 

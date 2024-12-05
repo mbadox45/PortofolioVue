@@ -2,7 +2,7 @@
     import { onMounted, ref, watch } from 'vue';
     import { descAbEng, descAbInd } from '@/api/DummyData';
     import { useRoute } from 'vue-router';
-    import { resumeElements } from '@/api/TransitionEffect';
+    import { resumeElements, resumeOutElements } from '@/api/TransitionEffect';
 
 
     const desc = ref(descAbEng)
@@ -30,6 +30,10 @@
         return await resumeElements();
     };
 
+    const animatesOut = async () => {
+        return await resumeOutElements();
+    };
+
 
     watch(
         () => route.query.country, mainFunc, animates, { immediate: true } // This ensures `mainFunc` is run initially on mount
@@ -37,9 +41,9 @@
 </script>
 
 <template>
-    <section class="relative flex items-center justify-center w-full min-h-screen gap-0">
-        <div class="flex justify-center w-full">
-            <div class="rounded-full border-[4px] border-green-300 shadow-md shadow-green-300 photo-image">
+    <section id="about" class="relative flex items-center justify-center w-full h-full gap-0 this-section">
+        <div class="flex justify-center w-full photo-image">
+            <div class="rounded-full border-[4px] border-green-300 shadow-md shadow-green-300">
                 <img src="/gambar4.png" alt="Rio Teguh" class="bg-white border-black rounded-full border-[15px] shadow-white shadow-inner" width="400px">
             </div>
         </div>
@@ -53,6 +57,9 @@
                 </div>
             </div>
         </div>
-        <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div>
+        <!-- <div class="absolute bottom-[5rem] animate-bounce rounded-full cursor-pointer" @click="animatesOut">
+            <i class="p-3 font-black text-green-300 bg-black rounded-full pi pi-angle-double-down" style="font-size:30px;"/>
+        </div> -->
+        <!-- <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div> -->
     </section>
 </template>

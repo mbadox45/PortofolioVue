@@ -32,7 +32,7 @@ watch(
 </script>
 
 <template>
-    <section v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }" class="flex flex-col items-center justify-center w-full gap-[4rem] min-h-screen pt-[10rem]">
+    <section id="experience" class="flex flex-col items-center justify-center w-full gap-[4rem] pt-[10rem]">
         <span class="w-full text-6xl font-black text-center text-black uppercase">{{ title3 }}</span>
         <div class="flex flex-col w-full px-[4rem] pb-[5rem]">
             <div class="flex items-center w-full" v-for="(item, index) in events" :key="index" :class="index % 2 === 1 ? 'justify-end flex-row' : 'justify-start flex-row-reverse'">
@@ -64,7 +64,7 @@ watch(
                 </div>
             </div>
         </div>
-        <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div>
+        <!-- <div class="absolute w-full py-[1.5rem] bottom-0 bg-black"></div> -->
     </section>
 </template>
 <style scoped>
