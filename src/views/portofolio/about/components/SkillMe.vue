@@ -45,14 +45,7 @@ const animates = async () => {
     return await skillElements();
 };
 
-// const loadSkill = async () => {
-//     frontend.value = skill.value.filter((item) => item.type == 'fe');
-//     backend.value = skill.value.filter((item) => item.type == 'be');
-//     database.value = skill.value.filter((item) => item.type == 'dll');
-// };
-
 const mainFunc = async () => {
-    console.log(route.query.country);
     if (route.query.country == null) {
         title2.value = 'Skills';
     } else {
@@ -71,10 +64,10 @@ watch(
 <template>
     <section id="skill" class="relative flex flex-col items-center justify-center w-full gap-[4rem]">
         <span class="w-full text-6xl font-black text-center text-black uppercase underline-offset-8 title-skill">{{ title2 }}</span>
-        <div class="w-full p-5">
-            <Carousel :value="skill" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" class="icon-section">
+        <div class="w-full p-5 bg-black border-t-4 border-b-4 border-green-300 icon-skill">
+            <Carousel class="" :value="skill" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="5000">
                 <template #item="slotProps">
-                    <div class="flex justify-center p-4 m-2 transition-all duration-300 bg-white rounded shadow cursor-pointer hover:shadow-xl">
+                    <div class="flex justify-center p-4 m-4 transition-all duration-300 bg-white border border-green-300 shadow-md cursor-pointer shadow-green-300 rounded-xl hover:shadow-lg hover:shadow-green-300">
                         <div class="flex flex-col gap-3">
                             <img :src="`/iconskill/${slotProps.data.img}.png`" :alt="slotProps.data.name" class="p-3 transition-all duration-300 bg-transparent rounded-3xl" width="100px" />
                             <span class="text-lg font-bold text-center">{{slotProps.data.name}}</span>
@@ -119,24 +112,3 @@ watch(
     </section>
 </template>
 
-<style scoped>
-@keyframes slidedown-icon {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.slidedown-icon {
-    animation: slidedown-icon;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-</style>

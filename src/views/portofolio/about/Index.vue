@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import AboutMe from './components/AboutMe.vue';
 import ExperienceMe from './components/ExperienceMe.vue';
 import SkillMe from './components/SkillMe.vue';
-import { resumeElements, resumeOutElements, skillOutElements } from '@/api/TransitionEffect';
+import { resumeOutElements, skillOutElements, experienceOutElements } from '@/api/TransitionEffect';
 
 const route = useRoute();
 
@@ -14,15 +14,45 @@ onMounted(() => {
 });
 
 const animatesOut = async (val) => {
+    const nilai = bagian.value;
     if (val == 0) {
-        await skillOutElements();
+        if (nilai == 1) {
+            await skillOutElements();
+            setTimeout(function() {
+                bagian.value = val;
+            }, 1300);
+        } else {
+            await experienceOutElements()
+            setTimeout(function() {
+                bagian.value = val;
+            }, 1500);
+        }
     } else if (val == 1) {
-        await resumeOutElements();
+        if (nilai == 0) {
+            await resumeOutElements();
+            setTimeout(function() {
+                bagian.value = val;
+            }, 2300)
+        } else {
+            await experienceOutElements()
+            setTimeout(function() {
+                bagian.value = val;
+            }, 1300)
+        }
     } else {
+        if (nilai == 1) {
+            await skillOutElements();
+            setTimeout(function() {
+                bagian.value = val;
+            }, 1300)
+        } else {
+            await resumeOutElements();
+            setTimeout(function() {
+                bagian.value = val;
+            }, 2000)
+        }
     }
-    setTimeout(function() {
-        bagian.value = val;
-    }, 3000);
+    
 };
 </script>
 

@@ -16,7 +16,6 @@
     })
 
     const mainFunc = () => {
-        console.log(route.query.country);
         if (route.query.country == null) {
             title.value = "About Me"
             desc.value = descAbEng
@@ -29,11 +28,6 @@
     const animates = async () => {
         return await resumeElements();
     };
-
-    const animatesOut = async () => {
-        return await resumeOutElements();
-    };
-
 
     watch(
         () => route.query.country, mainFunc, animates, { immediate: true } // This ensures `mainFunc` is run initially on mount

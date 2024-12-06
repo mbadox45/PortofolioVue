@@ -117,46 +117,141 @@ export const resumeOutElements = () => {
             }
         }
     });
-    
 }
 
 export const skillElements = () => {
     gsap.from(".title-skill", {
         opacity: 0,
+        y: -50,
         scale: 0.5,
         duration: 1,
-        ease: "back.in(1.8)",
+        ease: "back.out",
     });
     gsap.from(".icon-skill", {
         opacity: 0,
-        scale: 0.5,
-        duration: 0.8,
-        ease: "back.out(1.7)",
+        duration: 1,
         delay: 1,
-        stagger: 0.2,
+        ease: "power2.out",
     });
 }
 
 export const skillOutElements = () => {
-    gsap.from(".title-skill", {
+    gsap.to(".title-skill", {
         opacity: 0,
-        // scale: 0.5,
-        duration: 1,
-        ease: "back.out(1.8)",
+        // scale: 0.8,
+        duration: 0.5,
+        ease: "power2.out",
         onComplete: () => {
-            const element = document.querySelector(".this-section");
+            const element = document.querySelector(".title-skill");
             if (element) {
                 element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
             }
         }
     });
-    gsap.from(".icon-skill", {
+    gsap.to(".icon-skill", {
         opacity: 0,
-        scale: 0.5,
-        duration: 0.8,
+        // scale: 0.8,
+        duration: 0.5,
         ease: "back.out(1.7)",
+        delay: 0.5,
+        onComplete: () => {
+            const element = document.querySelector(".icon-skill");
+            if (element) {
+                element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
+            }
+        }
+    });
+}
+
+export const experienceElements = () => {
+    gsap.from(".title-experience", {
+        opacity: 0,
+        y: -50,
+        scale: 0.5,
+        duration: 1,
+        ease: "back.out",
+    });
+    gsap.from(".job-experience", {
+        opacity: 0,
+        x: -50,
+        duration: 1.2,
+        ease: "back.inOut(1.7)",
+        delay: 0.5,
+    });
+    // gsap.from(".icon-skill", {
+    //     opacity: 0,
+    //     duration: 1,
+    //     delay: 1,
+    //     ease: "power2.out",
+    // });
+}
+
+export const experienceOutElements = () => {
+    gsap.to(".title-experience", {
+        opacity: 0,
+        // scale: 0.8,
+        duration: 0.5,
+        ease: "power2.out",
+        onComplete: () => {
+            const element = document.querySelector(".title-experience");
+            if (element) {
+                element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
+            }
+        }
+    });
+    gsap.to(".job-experience", {
+        opacity: 0,
+        // scale: 0.8,
+        x: -50,
+        duration: 0.5,
+        ease: "back.inOut(2)",
+        delay: 0.5,
+        onComplete: () => {
+            const element = document.querySelector(".job-experience");
+            if (element) {
+                element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
+            }
+        }
+    });
+    gsap.to(".detail-experience", {
+        opacity: 0,
+        // scale: 0.8,
+        // x: -50,
+        duration: 0.5,
+        ease: "power.inOut(2)",
         delay: 1,
-        stagger: 0.2,
+        onComplete: () => {
+            const element = document.querySelector(".detail-experience");
+            if (element) {
+                element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
+            }
+        }
+    });
+}
+
+export const detailJobsElements = () => {
+    gsap.from(".desc-experience", {
+        opacity: 0,
+        // y: -50,
+        scale: 0.5,
+        duration: 0.5,
+        ease: "power2.inOut",
+    });
+}
+
+export const detailJobsOutElements = () => {
+    gsap.from(".desc-experience", {
+        opacity: 0,
+        // scale: 0.8,
+        duration: 0.5,
+        ease: "power2.inOut(2)",
+        delay: 0.5,
+        onComplete: () => {
+            const element = document.querySelector(".desc-experience");
+            if (element) {
+                element.style.visibility = "hidden"; // Elemen menjadi tak terlihat
+            }
+        }
     });
 }
 
