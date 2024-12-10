@@ -37,8 +37,10 @@
 <template>
     <section id="about" class="relative flex items-center justify-center w-full h-full gap-0 this-section">
         <div class="flex justify-center w-full photo-image">
-            <div class="rounded-full border-[4px] border-green-300 shadow-md shadow-green-300">
-                <img src="/gambar4.png" alt="Rio Teguh" class="bg-white border-black rounded-full border-[15px] shadow-white shadow-inner" width="400px">
+            <div class="relative rounded-full">
+                <img src="/gambar5.png" alt="Rio Teguh" class="rounded-xl" width="400px">
+                <div class="absolute bottom-[0%] left-[15%] p-[10rem] z-[-2] rounded-3xl bg-black border-r-[0.6rem] border-green-300"></div>
+                <!-- <div class="absolute bottom-[40%] left-[13%] p-[6rem] z-[-1] rounded-full bg-green-300"></div> -->
             </div>
         </div>
         <div class="flex flex-col w-full gap-[3rem] pr-[5rem] rounded-xl">
