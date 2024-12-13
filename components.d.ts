@@ -20,6 +20,7 @@ declare module 'vue' {
     Chip: typeof import('primevue/chip')['default']
     Column: typeof import('primevue/column')['default']
     DataTable: typeof import('primevue/datatable')['default']
+    Dialog: typeof import('primevue/dialog')['default']
     Divider: typeof import('primevue/divider')['default']
     FloatingConfigurator: typeof import('./src/components/FloatingConfigurator.vue')['default']
     InputText: typeof import('primevue/inputtext')['default']
