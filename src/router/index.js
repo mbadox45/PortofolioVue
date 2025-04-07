@@ -7,7 +7,7 @@ const router = createRouter({
             path: '/',
             // component: () => import('@/views/portofolio/Index.vue'),
             component: () => import('@/views/portofolio/layout/Index.vue'),
-            children:[
+            children: [
                 {
                     path: '/',
                     name: 'home',
@@ -29,7 +29,20 @@ const router = createRouter({
                     path: '/project',
                     name: 'project',
                     component: () => import('@/views/portofolio/application/Index.vue')
-                },
+                }
+            ]
+        },
+        {
+            path: '/',
+            // component: () => import('@/views/portofolio/Index.vue'),
+            component: () => import('@/views/portofolio2/layout/Index.vue'),
+            children: [
+                {
+                    path: '/v2/home',
+                    name: 'home2',
+                    // component: () => import('@/views/portofolio/components/Home.vue')
+                    component: () => import('@/views/portofolio2/home/Index.vue')
+                }
             ]
         },
         {
